@@ -20,3 +20,13 @@ app.get('/users', function(req, res) {
         message: 'successfully got users'
     });
 })
+
+
+app.get('/users/:id', function(req, res) {
+    console.log(req.params.id);
+    res.json({
+        success: true,
+        message: 'successfully got user',
+        user: req.params.id
+    })
+})
